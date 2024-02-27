@@ -5,8 +5,6 @@ import torchaudio
 
 from hifi_gan_bwe.datasets import RESAMPLE_RATES, SAMPLE_RATE
 
-bratz = 3
-
 class ContentCriteria(torch.nn.Module):
     """HiFi-GAN+ generator content losses
 
