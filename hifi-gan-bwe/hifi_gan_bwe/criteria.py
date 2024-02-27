@@ -5,6 +5,7 @@ import torchaudio
 
 from hifi_gan_bwe.datasets import RESAMPLE_RATES, SAMPLE_RATE
 
+bratz = 3
 
 class ContentCriteria(torch.nn.Module):
     """HiFi-GAN+ generator content losses
@@ -39,7 +40,7 @@ class ContentCriteria(torch.nn.Module):
             n_mels=128,
             power=1,
         )
-    #Loss functions
+    
     def forward(self, y_pred: torch.Tensor, y_true: torch.Tensor) -> torch.Tensor:
         # L1 waveform loss
         wav_loss = self._l1_loss(y_pred, y_true)
