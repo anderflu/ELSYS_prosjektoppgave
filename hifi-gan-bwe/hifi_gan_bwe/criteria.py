@@ -39,7 +39,7 @@ class ContentCriteria(torch.nn.Module):
             n_mels=128,
             power=1,
         )
-
+    #Loss functions
     def forward(self, y_pred: torch.Tensor, y_true: torch.Tensor) -> torch.Tensor:
         # L1 waveform loss
         wav_loss = self._l1_loss(y_pred, y_true)
